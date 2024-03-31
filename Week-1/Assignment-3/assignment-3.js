@@ -12,7 +12,7 @@ function toNumber(input) {
     // your code here
     let ans = [];
     for (let i = 0; i < input.length; i++) {
-        ans.push(input[i].charCodeAt(0) - 96);
+        ans.push(input[i].charCodeAt(0)-96);
     }
     return ans;
 }
