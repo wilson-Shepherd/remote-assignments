@@ -1,0 +1,79 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container1 {
+    display: flex;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.box-1 {
+    flex: 1;
+}
+
+.box-2 {
+    flex: 1;
+    text-align: right;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+    background-color: aliceblue;
+}
+
+.box-3 {
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container3, .container4 {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dog-img1, .dog-img2, .dog-img3, .dog-img4 {
+    flex: 1;
+    width: 100px;
+    height: auto;
+    margin: 10px; 
+}
+
+.container5 {
+    text-align: center;
+}
+
+.meme {
+    display: inline-flex;
+    background-color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 20px; 
+}
+
+.container6, .container7 {
+    display: none;
+    justify-content: space-around;
+    align-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dog-img5, .dog-img6, .dog-img7, .dog-img8 {
+    flex: 1;
+    width: 100px;
+    height: auto;
+    margin: 10px; 
+}
