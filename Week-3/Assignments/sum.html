@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3</title>
+  </head>
+  <body>
+    <h1>Assignment 3: Connect to Backend API by AJAX</h1>
+    <input type="number" id="inputNumber" />
+    <button onclick="calculateSum()">Calculate</button>
+    <div id="result"></div>
+
+    <script>
+      function calculateSum() {
+        const number = document.getElementById("inputNumber").value;
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          // 確認連接情況為OK
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              document.getElementById("result").innerText = xhr.responseText;
+              // 每次輸入後清空欄位
+              document.getElementById("inputNumber").value = "";
+            } else {
+              console.error("Failed to fetch data");
+            }
+          }
+        };
+        // HTTP request by AJAX to http://localhost:3000/data?number=xyz
+        xhr.open("GET", `http://localhost:3000/data?number=${number}`);
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
