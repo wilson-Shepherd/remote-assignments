@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-app.use(express.static(__dirname));
+app.use(express.static(__dirname)); // for sum.html usage
 
 // def root路由 ('/')
 app.get("/", (req, res) => {
@@ -20,6 +20,10 @@ app.get("/data", (req, res) => {
 
   if (isNaN(number) || !Number.isInteger(parseFloat(number))) {
     return res.send("Wrong Parameter");
+  }
+
+  if (parseInt(number) < 0) {
+    return res.send("It has to be positive integer");
   }
 
   // 計算 1 到 number 的總和
